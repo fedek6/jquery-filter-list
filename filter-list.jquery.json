@@ -1,0 +1,30 @@
+{
+"name": "filter-list",
+"title": "jQuery Filter List",
+"description": "jQuery plugin for filtering lists.",
+"keywords": [
+"lists",
+"ul",
+"filter",
+"text"
+],
+"version": "1.0",
+"author": {
+"name": "Konrad Fedorczyk",
+"email": "fedek6@gmail.com",
+"url": "http://blog.realhe.ro"
+},
+"licenses": [
+{
+"type": "GPL v2",
+"url": "https://github.com/fedek6/jquery-filter-list/blob/master/LICENSE"
+}
+],
+"bugs": "https://github.com/fedek6/jquery-filter-list/issues",
+"homepage": "http://blog.realhe.ro/projects/jquery-filter-list-plugin/",
+"docs": "http://blog.realhe.ro/projects/jquery-filter-list-plugin/",
+"download": "http://blog.realhe.ro/wp-content/uploads/2013/12/jquery-filter-list.zip",
+"dependencies": {
+"jquery": ">=1.5"
+}
+}
