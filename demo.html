@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery filter list demo</title>
+	<style type="text/css">
+		ul#dynamic-search-list {
+			list-style: none;
+			padding: 0px 0;
+			margin: 0px 0;
+		}
+		ul#dynamic-search-list li.no-results {
+			color: Silver;
+		}
+		ul#dynamic-search-list li.even {
+			background-color: Silver;
+		}
+	</style>
+</head>
+<body>
+	<div style="width: 300px">
+	    <form class="pure-form" id="student-search">
+	        <fieldset>
+	            <input id="filter-input" type="text" placeholder="Szukany tekst" />
+	        </fieldset>
+	    </form>
+	</div>
+	<div style="width: 300px; border: solid 1px Black" id="scroll-pane">
+	    <ul id="dynamic-search-list">
+	        <li>Stan Marsh</li>
+	        <li>Kyle Broflovski</li>
+	        <li>Eric Cartman</li>
+	        <li>Kenny McCormick</li>
+	        <li>Butters Stotch</li>
+	        <li>Bebe Stevens</li>
+	        <li>Clyde Donovan</li>
+	        <li>Craig Tucker</li>
+	        <li>Jimmy Valmer</li>
+	        <li>Token Black</li>
+	        <li>Wendy Testaburger</li>
+	        <li>Sharon Marsh</li>
+	        <li>Randy Marsh</li>
+	        <li>Gerald Broflovski</li>
+	        <li>Liane Cartman</li>
+	    </ul>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="jquery-filter-list.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('ul#dynamic-search-list').filterList({
+			    inputSelector: '#filter-input',
+			    caseSensitive: false,
+			    zebra: false,
+			});
+		});
+	</script>
+</body>
+</html>
