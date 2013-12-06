@@ -4,15 +4,15 @@
 	<meta charset="utf-8">
 	<title>jQuery filter list demo</title>
 	<style type="text/css">
-		ul#dynamic-search-list {
+		ul.dynamic-search-list {
 			list-style: none;
 			padding: 0px 0;
 			margin: 0px 0;
 		}
-		ul#dynamic-search-list li.no-results {
+		ul.dynamic-search-list li.no-results {
 			color: Silver;
 		}
-		ul#dynamic-search-list li.even {
+		ul.dynamic-search-list li.even {
 			background-color: Silver;
 		}
 	</style>
@@ -26,7 +26,7 @@
 	    </form>
 	</div>
 	<div style="width: 300px; border: solid 1px Black" id="scroll-pane">
-	    <ul id="dynamic-search-list">
+	    <ul class="dynamic-search-list">
 	        <li>Stan Marsh</li>
 	        <li>Kyle Broflovski</li>
 	        <li>Eric Cartman</li>
@@ -43,16 +43,23 @@
 	        <li>Gerald Broflovski</li>
 	        <li>Liane Cartman</li>
 	    </ul>
+	    <p>Detached list:</p>
+	    <ul class="dynamic-search-list" id="2" style="margin-top: 20px">
+	        <li>Stan Marsh</li>
+	        <li>Kyle Broflovski</li>
+	    </ul>
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="jquery-filter-list.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('ul#dynamic-search-list').filterList({
+			$('ul.dynamic-search-list').filterList({
 			    inputSelector: '#filter-input',
 			    caseSensitive: false,
-			    zebra: false,
+			    zebra: true,
 			});
+			
+			$('ul#2').filterList('detach');
 		});
 	</script>
 </body>

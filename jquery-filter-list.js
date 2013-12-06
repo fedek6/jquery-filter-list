@@ -13,7 +13,9 @@
         }
         // on detach action
         else if (par1 === 'detach') {
-            return this;
+        	return this.each(function() {
+        		$(this).data('filtered', false);
+        	});
         }
 
         // variables declaration
@@ -23,13 +25,25 @@
        	if(options.zebra) {
        		$ul.find('li').filter(':odd').addClass('even');
        	}
-
+		
+		// init
+		$ul.each(function() {
+            if($(this).data().filtered === undefined) {
+            	$(this).data('filtered', true);
+            }
+           
+           	$(this).find('li').not('.no-results').hideByContent($input.val(), options);	
+		});
+		
         // on default attach
         $input.keyup(function (e) {
             var txt = $(this).val();
 
             $ul.each(function () {
-                $(this).find('li').not('.no-results').hideByContent(txt, options);
+            	if($(this).data().filtered) {
+            		$(this).find('li').not('.no-results').hideByContent(txt, options);
+            	}
+                
             });
         });
 
