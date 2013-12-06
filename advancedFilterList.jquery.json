@@ -1,14 +1,14 @@
 {
-"name": "filterList",
-"title": "jQuery Filter List",
-"description": "jQuery plugin for filtering lists using text input.",
+"name": "advancedFilterList",
+"title": "jQuery Advanced Filter List",
+"description": "Configurable jQuery plugin for filtering lists using text input.",
 "keywords": [
 "lists",
 "ul",
 "filter",
 "text"
 ],
-"version": "0.1.2",
+"version": "0.1.3",
 "author": {
 "name": "Konrad Fedorczyk",
 "email": "fedek6@gmail.com",
