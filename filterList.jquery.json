@@ -1,7 +1,7 @@
 {
 "name": "filterList",
 "title": "jQuery Filter List",
-"description": "jQuery plugin for filtering lists.",
+"description": "jQuery plugin for filtering lists using text input.",
 "keywords": [
 "lists",
 "ul",
